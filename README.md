@@ -3,9 +3,9 @@
 
 Differences to `path.extname`:
 
-* Returns lowercase extensions by default
-* Treats dotfiles as extension
-* Doesn't include a '.' in the extension
+* Returns lowercase extensions by default.
+* Treats dotfiles as extension.
+* Doesn't include a `'.'` in the extension.
 
 ## Installation
 ```
@@ -29,7 +29,7 @@ ext('INDEX.HTML', {preserveCase: true})   //=> 'HTML'
 ## API
 ### ext(filename, options)
 - `filename` {String} The file name. Required.
-- `options` {Object} Optional options object.
+- `options` {Object} Options object.
 
 #### Options
 - `preserveCase` {Boolean} Whether case should be preserved. Default: false.
