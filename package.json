@@ -1,0 +1,33 @@
+{
+  "name": "file-extension",
+  "version": "0.1.0",
+  "description": "Get the extension of a given filename",
+  "author": "silverwind <me@silverwind.io> (https://github.com/silverwind)",
+  "repository": "silverwind/file-extension",
+  "license": "BSD-2-clause",
+  "bugs": "https://github.com/silverwind/file-extension/issues",
+  "homepage": "https://github.com/silverwind/file-extension",
+  "scripts": {
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "file",
+    "extension",
+    "extname",
+    "ext",
+    "file extension",
+    "file-extension"
+  ],
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bump": "^0.0.17",
+    "grunt-shell": "^1.1.1",
+    "grunt-contrib-jshint": "^0.11.0"
+  }
+}
