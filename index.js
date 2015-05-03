@@ -1,20 +1,27 @@
 "use strict";
 
-module.exports = function (filename, preserveCase) {
+module.exports = function (filename, opts) {
     var ret;
 
-    if (!filename) {
-        ret = "";
-    } else if (/^\..+$/.test(filename) && filename.match(/\./g).length === 1) {
-        ret = filename.substring(1);
-    } else {
-        var parts = filename.split(".");
-        if (parts.length === 1 || (parts[0] === "" && parts.length === 2)) {
-            ret = "";
-        } else {
-            ret = parts.pop();
-        }
+    if (!opts) {
+        opts = {};
     }
 
-    return preserveCase ? ret : ret.toLowerCase();
+    if (!filename) {
+        return "";
+    }
+
+    if (/^\..+$/.test(filename) && filename.match(/\./g).length === 1) {
+        ret = filename.substring(1);
+    }
+
+    var parts = filename.split(".");
+
+    if (parts.length === 1 || (parts[0] === "" && parts.length === 2)) {
+        return "";
+    } else {
+        ret = parts.pop();
+    }
+
+    return opts.preserveCase ? ret : ret.toLowerCase();
 };
