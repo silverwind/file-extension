@@ -22,8 +22,8 @@ ext('file')               //=> ''
 ext('.file.tar')          //=> 'tar'
 
 // Or with case preserved
-ext('.Vagrantfile', true) //=> 'Vagrantfile'
-ext('INDEX.HTML', true)   //=> 'HTML'
+ext('.Vagrantfile', {preserveCase: true}) //=> 'Vagrantfile'
+ext('INDEX.HTML', {preserveCase: true})   //=> 'HTML'
 ```
 
 ## API
