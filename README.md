@@ -3,9 +3,9 @@
 
 Differences to `path.extname`:
 
-* Returns lowercase extensions by default.
 * Treats dotfiles as extension.
-* Doesn't include a `'.'` in the extension.
+* Doesn't include the dot in the extension.
+* Returns lowercase extensions by default.
 
 ## Installation
 ```
