@@ -12,6 +12,6 @@ it("should return correct extensions", function () {
     assert(ext("file.zip") === "zip");
     assert(ext("NoExtension") === "");
     assert(ext(".Dockerfile") === "dockerfile");
-    assert(ext("INDEX.HTML", true) === "HTML");
-    assert(ext(".Dockerfile", true) === "Dockerfile");
+    assert(ext("INDEX.HTML", {preserveCase: true}) === "HTML");
+    assert(ext(".Dockerfile", {preserveCase: true}) === "Dockerfile");
 });
