@@ -12,7 +12,7 @@
     "test": "mocha"
   },
   "files": [
-    "index.js"
+    "file-extension.js"
   ],
   "keywords": [
     "file",
