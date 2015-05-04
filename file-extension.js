@@ -1,6 +1,7 @@
+/* global define: false */
 "use strict";
 
-module.exports = function (filename, opts) {
+function ext(filename, opts) {
     var ret;
 
     if (!opts) {
@@ -24,4 +25,14 @@ module.exports = function (filename, opts) {
     }
 
     return opts.preserveCase ? ret : ret.toLowerCase();
-};
+}
+
+(function (mod) {
+    if (typeof exports === "object") {
+        module.exports = mod();
+    } else if (typeof define === "function" && define.amd) {
+        define([], mod);
+    } else {
+        this.ext = mod();
+    }
+}(function () { return ext; }));

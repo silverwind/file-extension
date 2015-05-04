@@ -7,11 +7,9 @@
   "license": "BSD-2-clause",
   "bugs": "https://github.com/silverwind/file-extension/issues",
   "homepage": "https://github.com/silverwind/file-extension",
+  "main": "file-extension.js",
   "scripts": {
     "test": "mocha"
-  },
-  "engines": {
-    "node": ">=0.10.0"
   },
   "files": [
     "index.js"

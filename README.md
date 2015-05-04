@@ -8,22 +8,28 @@ Differences to `path.extname`:
 * Returns lowercase extensions by default.
 
 ## Installation
+#### Node.js
 ```
 $ npm install --save file-extension
 ```
+#### Browser
+```html
+<script src="file-extension.js"></script>
+<!-- Available as `ext` -->
+```
 ## Example
 ```js
-var ext = require('file-extension');
+var ext = require('file-extension'); // Skip this in the browser
 
 // Case insensitive
-ext('file.zip')           //=> 'zip'
-ext('.Dockerfile')        //=> 'dockerfile'
-ext('file')               //=> ''
-ext('.file.tar')          //=> 'tar'
+ext('file.zip');          //=> 'zip'
+ext('.Dockerfile');       //=> 'dockerfile'
+ext('file');              //=> ''
+ext('.file.tar');         //=> 'tar'
 
 // Or with case preserved
-ext('.Vagrantfile', {preserveCase: true}) //=> 'Vagrantfile'
-ext('INDEX.HTML', {preserveCase: true})   //=> 'HTML'
+ext('.Vagrantfile', {preserveCase: true}); //=> 'Vagrantfile'
+ext('INDEX.HTML', {preserveCase: true});   //=> 'HTML'
 ```
 
 ## API
