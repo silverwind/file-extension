@@ -33,7 +33,7 @@ ext('INDEX.HTML', {preserveCase: true});   //=> 'HTML'
 ```
 
 ## API
-### ext(filename, options)
+### ext(filename, [options])
 - `filename` {String} The file name. Required.
 - `options` {Object} Options object.
 
