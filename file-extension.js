@@ -1,4 +1,3 @@
-/* global define: false */
 "use strict";
 
 function ext(filename, opts) {
