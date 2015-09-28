@@ -4,7 +4,7 @@
 var assert = require("assert");
 var ext = require("./");
 
-it("should return correct extensions", function () {
+it("should return correct extensions", function() {
   assert(ext("") === "");
   assert(ext(".") === "");
   assert(ext("file.") === "");

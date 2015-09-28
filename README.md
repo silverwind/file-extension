@@ -15,7 +15,7 @@ $ npm install --save file-extension
 #### Browser
 ```html
 <script src="file-extension.js"></script>
-<!-- Available as `ext` -->
+<!-- Available as `fileExtension` -->
 ```
 ## Example
 ```js
