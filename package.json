@@ -1,6 +1,6 @@
 {
   "name": "file-extension",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Get the extension of a given filename or path",
   "author": "silverwind <me@silverwind.io> (https://github.com/silverwind)",
   "repository": "silverwind/file-extension",
