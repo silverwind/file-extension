@@ -15,25 +15,25 @@ $ npm install --save file-extension
 #### Browser
 ```html
 <script src="file-extension.js"></script>
-<!-- Available as `fileExtension` -->
+<!-- Available as global `fileExtension` -->
 ```
 ## Example
 ```js
-var ext = require('file-extension'); // Skip this in the browser
+var fileExtension = require('file-extension'); // Skip this in the browser
 
 // Case insensitive
-ext('file.zip');          //=> 'zip'
-ext('.Dockerfile');       //=> 'dockerfile'
-ext('file');              //=> ''
-ext('.file.tar');         //=> 'tar'
+fileExtension('file.zip');          //=> 'zip'
+fileExtension('.Dockerfile');       //=> 'dockerfile'
+fileExtension('file');              //=> ''
+fileExtension('.file.tar');         //=> 'tar'
 
 // Or with case preserved
-ext('.Vagrantfile', {preserveCase: true}); //=> 'Vagrantfile'
-ext('INDEX.HTML', {preserveCase: true});   //=> 'HTML'
+fileExtension('.Vagrantfile', {preserveCase: true}); //=> 'Vagrantfile'
+fileExtension('INDEX.HTML', {preserveCase: true});   //=> 'HTML'
 ```
 
 ## API
-### ext(filename, [options])
+### fileExtension(filename, [options])
 - `filename` {String} The file name. Required.
 - `options` {Object} Options object.
 
