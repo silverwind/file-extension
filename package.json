@@ -10,7 +10,8 @@
     "test": "mocha"
   },
   "files": [
-    "file-extension.js"
+    "file-extension.js",
+    "file-extension.min.js"
   ],
   "keywords": [
     "file",
