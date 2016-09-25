@@ -1,7 +1,7 @@
 # file-extension [![NPM version](https://img.shields.io/npm/v/file-extension.svg?style=flat)](https://www.npmjs.org/package/file-extension) [![Dependency Status](http://img.shields.io/david/silverwind/file-extension.svg?style=flat)](https://david-dm.org/silverwind/file-extension)
 > Get the extension of a given filename or path
 
-Differences to `path.extname`:
+Differences to [`path.extname`](https://nodejs.org/api/path.html#path_path_extname_path):
 
 * Treats dotfiles as extension.
 * Doesn't include the dot in the extension.
