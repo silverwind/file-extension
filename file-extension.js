@@ -1,4 +1,4 @@
-/*! uppie | (c) 2015 silverwind | BSD license */
+/*! file-extension | (c) silverwind | BSD license */
 /* eslint-env commonjs, amd */
 "use strict";
 
@@ -12,21 +12,9 @@
   }
 })(function() {
   return function ext(filename, opts) {
-    var ret;
     if (!opts) opts = {};
     if (!filename) return "";
-
-    if (/^\..+$/.test(filename) && filename.match(/\./g).length === 1) {
-      ret = filename.substring(1);
-    } else {
-      var parts = filename.split(".");
-
-      if (parts.length === 1 || (parts[0] === "" && parts.length === 2)) {
-        ret = parts.shift();
-      } else {
-        ret = parts.pop();
-      }
-    }
-    return opts.preserveCase ? ret : ret.toLowerCase();
+    const ext = /[^.]*$/.exec(filename)[0];
+    return opts.preserveCase ? ext : ext.toLowerCase();
   };
 });

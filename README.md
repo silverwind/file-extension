@@ -3,9 +3,9 @@
 
 Differences to [`path.extname`](https://nodejs.org/api/path.html#path_path_extname_path):
 
-* Treats dotfiles as extension.
-* Doesn't include the dot in the extension.
-* Returns lowercase extensions by default.
+* Treats dotfiles as extension (`.eslintrc` => `eslintrc`)
+* Doesn't include the dot in the extension (`Makefile` => `makefile`).
+* Returns lowercase by default.
 
 ## Installation
 #### Node.js
@@ -24,7 +24,7 @@ var fileExtension = require('file-extension'); // Skip this in the browser
 // Case insensitive
 fileExtension('file.zip');          //=> 'zip'
 fileExtension('.Dockerfile');       //=> 'dockerfile'
-fileExtension('file');              //=> ''
+fileExtension('file');              //=> 'file'
 fileExtension('.file.tar');         //=> 'tar'
 
 // Or with case preserved
@@ -40,4 +40,4 @@ fileExtension('INDEX.HTML', {preserveCase: true});   //=> 'HTML'
 #### Options
 - `preserveCase` {Boolean} Whether case should be preserved. Default: false.
 
-© 2015 [silverwind](https://github.com/silverwind), distributed under BSD licence
+© [silverwind](https://github.com/silverwind), distributed under BSD licence
