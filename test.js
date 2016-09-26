@@ -11,6 +11,11 @@ it("should return correct extensions", function() {
   assert(ext("file.zip") === "zip");
   assert(ext("Makefile") === "makefile");
   assert(ext(".Dockerfile") === "dockerfile");
+  assert(ext("/a/b/file.") === "");
+  assert(ext("/.a.js") === "js");
+  assert(ext("C:\\file.zip") === "zip");
+  assert(ext("\\\\host\\Makefile") === "makefile");
+  assert(ext("~/.Dockerfile") === "dockerfile");
   assert(ext("Makefile", {preserveCase: true}) === "Makefile");
   assert(ext("INDEX.HTML", {preserveCase: true}) === "HTML");
   assert(ext(".Dockerfile", {preserveCase: true}) === "Dockerfile");
