@@ -22,7 +22,7 @@
       var parts = filename.split(".");
 
       if (parts.length === 1 || (parts[0] === "" && parts.length === 2)) {
-        return "";
+        ret = parts.shift();
       } else {
         ret = parts.pop();
       }
