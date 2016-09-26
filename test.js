@@ -10,8 +10,9 @@ it("should return correct extensions", function() {
   assert(ext("file.") === "");
   assert(ext(".a.js") === "js");
   assert(ext("file.zip") === "zip");
-  assert(ext("NoExtension") === "");
+  assert(ext("NoExtension") === "noextension");
   assert(ext(".Dockerfile") === "dockerfile");
+  assert(ext("NoExtension", { preserveCase: true }) === "NoExtension");
   assert(ext("INDEX.HTML", {preserveCase: true}) === "HTML");
   assert(ext(".Dockerfile", {preserveCase: true}) === "Dockerfile");
 });
