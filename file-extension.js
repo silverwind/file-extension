@@ -1,4 +1,4 @@
-/*! file-extension v3.0.2 | (c) silverwind | BSD license */
+/*! file-extension v3.1.0 | (c) silverwind | BSD license */
 /* eslint-env commonjs, amd */
 "use strict";
 
