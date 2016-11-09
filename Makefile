@@ -4,7 +4,7 @@
 VERSION := $(shell jq -r .version < package.json)
 
 lint:
-	eslint --ignore-pattern *.min.js *.js
+	eslint --ignore-pattern *.min.js .
 
 test:
 	node test.js
