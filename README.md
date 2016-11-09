@@ -7,6 +7,8 @@ Differences to [`path.extname`](https://nodejs.org/api/path.html#path_path_extna
 * Doesn't include the dot in the extension (`Makefile` => `makefile`).
 * Returns lowercase by default.
 
+Works in Node.js and the browser. Currently the module size is **123 bytes** gzipped.
+
 ## Installation
 #### Node.js
 ```

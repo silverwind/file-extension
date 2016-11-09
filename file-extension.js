@@ -1,4 +1,4 @@
-/*! file-extension | (c) silverwind | BSD license */
+/*! file-extension v3.0.2 | (c) silverwind | BSD license */
 /* eslint-env commonjs, amd */
 "use strict";
 
@@ -11,7 +11,7 @@
     this.fileExtension = m();
   }
 })(function() {
-  return function ext(filename, opts) {
+  return function fileExtension(filename, opts) {
     if (!opts) opts = {};
     if (!filename) return "";
     var ext = (/[^./\\]*$/.exec(filename) || [""])[0];
