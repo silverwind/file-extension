@@ -1,36 +1,33 @@
 lint:
-	eslint --color --quiet --ignore-pattern *.min.js .
+	eslint --ignore-pattern *.min.js *.js
 
 test:
-	npm test
+	node test.js
 
 min:
 	uglifyjs file-extension.js -o file-extension.min.js --mangle --compress --screw-ie8 --unsafe --comments '/file-extension/'
 	wc -c file-extension.min.js
 
 publish:
+	git push -u --tags origin master
 	npm publish
-	git push --follow-tags
 
-patch:
-	$(MAKE) lint
-	$(MAKE) test
-	$(MAKE) min
+update:
+	ncu --packageFile package.json -ua
+	rm -rf node_modules
+	yarn
+
+npm-patch:
 	npm version patch
-	$(MAKE) publish
 
-minor:
-	$(MAKE) lint
-	$(MAKE) test
-	$(MAKE) min
+npm-minor:
 	npm version minor
-	$(MAKE) publish
 
-major:
-	$(MAKE) lint
-	$(MAKE) test
-	$(MAKE) min
+npm-major:
 	npm version major
-	$(MAKE) publish
 
-.PHONY: lint min publish test patch minor major
+patch: lint test min npm-patch publish
+minor: lint test min npm-minor publish
+major: lint test min npm-major publish
+
+.PHONY: lint test min publish update npm-patch npm-minor npm-major patch minor major
