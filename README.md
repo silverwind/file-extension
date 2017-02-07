@@ -5,8 +5,9 @@
 Differences to [`path.extname`](https://nodejs.org/api/path.html#path_path_extname_path):
 
 * Treats dotfiles as extension (`.eslintrc` => `eslintrc`)
+* Treats extensionless files as extension (`Makefile` => `makefile`).
 * Doesn't include the dot in the extension (`package.json` => `json`).
-* Returns lowercase by default (`Makefile` => `makefile`).
+* Returns lowercase by default (`LICENCE` => `licence`).
 
 Works in Node.js and the browser. Currently the module size is **260 B bytes** gzipped.
 
