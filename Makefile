@@ -11,7 +11,7 @@ test:
 
 min:
 	uglifyjs file-extension.js -o file-extension.min.js --mangle --compress --screw-ie8 --unsafe --comments '/file-extension/' && wc -c file-extension.js
-	cat README.md | sed -E "s/[0-9]+ bytes/$$(gzip-size file-extension.min.js) bytes/" > README.md
+	cat README.md | sed -E "s/[0-9]+ bytes/$$(gzip-size --raw file-extension.min.js) bytes/" > README.md
 	git diff --exit-code &>/dev/null || git commit -am "rebuild"
 
 publish:
