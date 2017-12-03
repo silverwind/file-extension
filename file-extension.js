@@ -1,4 +1,4 @@
-/*! file-extension v3.1.2 | (c) silverwind | BSD license */
+/*! file-extension v4.0.0 | (c) silverwind | BSD license */
 "use strict";
 
 (function(m) {
