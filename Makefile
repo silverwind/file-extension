@@ -4,9 +4,10 @@
 VERSION := $(shell jq -r .version < package.json)
 
 lint:
-	eslint --ignore-pattern *.min.js .
+	node_modules/.bin/eslint --ignore-pattern *.min.js .
 
 test:
+	$(MAKE) lint
 	node test.js
 
 min:
@@ -19,7 +20,7 @@ publish:
 	npm publish
 
 update:
-	ncu --packageFile package.json -ua
+	node_modules/.bin/updates -u
 	rm -rf node_modules
 	yarn
 

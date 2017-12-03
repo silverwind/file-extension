@@ -1,6 +1,6 @@
 "use strict";
-var ext = require("./");
-var assert = require("assert");
+const ext = require("./");
+const assert = require("assert");
 
 [
   {in: "", out: ""},
