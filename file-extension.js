@@ -1,4 +1,4 @@
-/*! file-extension v4.0.0 | (c) silverwind | BSD license */
+/*! file-extension v4.0.1 | (c) silverwind | BSD license */
 /* eslint-disable no-var */
 "use strict";
 
