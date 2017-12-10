@@ -1,4 +1,5 @@
 /*! file-extension v4.0.0 | (c) silverwind | BSD license */
+/* eslint-disable no-var */
 "use strict";
 
 (function(m) {
@@ -13,7 +14,7 @@
   return function fileExtension(filename, opts) {
     if (!opts) opts = {};
     if (!filename) return "";
-    const ext = (/[^./\\]*$/.exec(filename) || [""])[0];
+    var ext = (/[^./\\]*$/.exec(filename) || [""])[0];
     return opts.preserveCase ? ext : ext.toLowerCase();
   };
 });
