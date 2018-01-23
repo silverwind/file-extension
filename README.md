@@ -9,7 +9,7 @@ Differences to [`path.extname`](https://nodejs.org/api/path.html#path_path_extna
 * Doesn't include the dot in the extension (`package.json` => `json`)
 * Returns lowercase by default (`LICENCE` => `licence`)
 
-Works in Node.js and the browser. The module's size is currently 260 bytes gzipped.
+Works in Node.js and the browser. The module's size is currently 263 bytes gzipped.
 
 ## Installation
 #### Node.js
