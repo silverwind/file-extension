@@ -6,7 +6,7 @@ lint:
 
 test:
 	$(MAKE) lint
-	node test.js
+	node --trace-deprecation --throw-deprecation --trace-warnings test.js
 
 min:
 	$(BIN)/uglifyjs file-extension.js -o file-extension.min.js --mangle --compress--unsafe --comments '/file-extension/' && wc -c file-extension.js
