@@ -1,5 +1,4 @@
 /*! file-extension v4.0.2 | (c) silverwind | BSD license */
-/* eslint-disable no-var */
 "use strict";
 
 (function(m) {
